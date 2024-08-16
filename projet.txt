@@ -1,0 +1,198 @@
+const TimeLineEvent = () => {
+  // const doubleProject=[{}]
+  return (
+    <div className="bg-gray-900 p-4 mt-10 overflow-hidden md:overflow-hidden items-center justify-center">
+      <h2 className="text-3xl text-indigo-700 font-bold mb-12 ">Chronologie</h2>
+      <div className="flex flex-wrap grid-cols-9 p-2 mx-auto md:grid overflow-hidden">
+        <div className="flex md:contents flex-row-reverse">
+          <motion.div
+            initial={{ right: "20rem" }}
+            whileInView={{ right: "0rem" }}
+            transition={transition}
+            className="relative flex flex-wrap p-4 my-6 text-gray-800 bg-blue-300 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto"
+          >
+            <h3 className="text-lg font-semibold lg:text-xl">Projet</h3>
+            <p className="mt-2 leading-6 flex  flex-wrap">
+              Conception,realisation et deployement d&#39;un projet de collecte
+              de don en ligne avec Django et Nextjs
+            </p>
+            <span className="absolute text-sm text-gray-200 -top-5 left-2 whitespace-nowrap">
+              Ao&#251;t 2024
+            </span>
+          </motion.div>
+          <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+            <div className="flex items-center justify-center w-6 h-full">
+              <div className="w-1 h-full bg-blue-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300"></div>
+            </div>
+            <div className="absolute w-6 h-6 -mt-3 bg-gray-900 border-4 border-indigo-400 rounded-full top-1/2"></div>
+          </div>
+        </div>
+        <div className="flex md:contents">
+          <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+            <div className="flex items-center justify-center w-6 h-full">
+              <div className="w-1 h-full bg-indigo-300"></div>
+            </div>
+            <div className="absolute w-6 h-6 -mt-3 bg-gray-900 border-4 border-indigo-400 rounded-full top-1/2"></div>
+          </div>
+          <motion.div
+            initial={{ right: "-20rem" }}
+            whileInView={{ right: "0rem" }}
+            transition={transition}
+            className="relative p-4 my-6 text-gray-800 bg-blue-300 rounded-xl col-start-6 col-end-10 mr-auto"
+          >
+            <h3 className="text-lg font-semibold lg:text-xl">Projet</h3>
+            <p className="mt-2 leading-6">
+              Conception et r&eacute;alisation d&#39;un mini r&eacute;seaux
+              sociaux avec React Native et Django
+            </p>
+            <span className="absolute text-sm text-gray-200 -top-5 left-2 whitespace-nowrap">
+              Juillet - Ao&#251;t 2024
+            </span>
+          </motion.div>
+        </div>
+        <div className="flex md:contents flex-row-reverse">
+          <motion.div
+            initial={{ right: "20rem" }}
+            whileInView={{ right: "0rem" }}
+            transition={transition}
+            className="relative p-4 my-6 text-gray-800 bg-blue-300 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto"
+          >
+            <h3 className="text-lg font-semibold lg:text-xl">Projet</h3>
+            <p className="mt-2 leading-6">
+              Conception et r&eacute;alisation d&#39;un projet de gestion
+              d&#39;&eacute;tudiant avec React js et Node js
+            </p>
+            <span className="absolute text-sm text-gray-200 -top-5 left-2 whitespace-nowrap">
+              Mai 2024
+            </span>
+          </motion.div>
+          <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+            <div className="flex items-center justify-center w-6 h-full">
+              <div className="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300"></div>
+            </div>
+            <div className="absolute w-6 h-6 -mt-3 bg-gray-900 border-4 border-indigo-400 rounded-full top-1/2"></div>
+          </div>
+        </div>
+        <div className="flex md:contents">
+          <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+            <div className="flex items-center justify-center w-6 h-full">
+              <div className="w-1 h-full bg-indigo-300"></div>
+            </div>
+            <div className="absolute w-6 h-6 -mt-3 bg-gray-900 border-4 border-indigo-400 rounded-full top-1/2"></div>
+          </div>
+          <motion.div
+            initial={{ right: "-10rem" }}
+            whileInView={{ right: "0rem" }}
+            transition={transition}
+            className="relative p-4 my-6 text-gray-800 bg-blue-300 rounded-xl col-start-6 col-end-10 mr-auto"
+          >
+            <h3 className="text-lg font-semibold lg:text-xl">
+              Stage en entreprise
+            </h3>
+            <p className="mt-2 leading-6">
+              Conception, r&eacute;alisation et de&eacute;ployement d&#39;un
+              projet de gestion de vente avec C# .Net
+            </p>
+            <span className="absolute text-sm text-gray-200 -top-5 left-2 whitespace-nowrap">
+              Ao&#251;t 2023
+            </span>
+          </motion.div>
+        </div>
+        <div className="flex md:contents flex-row-reverse">
+          <motion.div
+            initial={{ right: "20rem" }}
+            whileInView={{ right: "0rem" }}
+            transition={transition}
+            className="relative p-4 my-6 text-gray-800 bg-blue-300 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto"
+          >
+            <h3 className="text-lg font-semibold lg:text-xl">Projet</h3>
+            <p className="mt-2 leading-6">
+              Conception et r&eacute;alisation d&#39;une application desktop de
+              gestion de stock.
+            </p>
+            <span className="absolute text-sm text-gray-200 -top-5 left-2 whitespace-nowrap">
+              Juillet 2023
+            </span>
+          </motion.div>
+          <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+            <div className="flex items-center justify-center w-6 h-full">
+              <div className="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300"></div>
+            </div>
+            <div className="absolute w-6 h-6 -mt-3 bg-gray-900 border-4 border-indigo-400 rounded-full top-1/2"></div>
+          </div>
+        </div>
+        {/* tokony soloina */}
+        <div className="flex md:contents">
+          <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+            <div className="flex items-center justify-center w-6 h-full">
+              <div className="w-1 h-full bg-indigo-300"></div>
+            </div>
+            <div className="absolute w-6 h-6 -mt-3 bg-gray-900 border-4 border-indigo-400 rounded-full top-1/2"></div>
+          </div>
+          <motion.div
+            initial={{ right: "-10rem" }}
+            whileInView={{ right: "0rem" }}
+            transition={transition}
+            className="relative p-4 my-6 text-gray-800 bg-blue-300 rounded-xl col-start-6 col-end-10 mr-auto"
+          >
+            <h3 className="text-lg font-semibold lg:text-xl">Projet </h3>
+            <p className="mt-2 leading-6">
+              Conception, r&eacute;alisation d&#39;une application desktop de
+              gestion de personnel et de cong&eacute;.
+            </p>
+            <span className="absolute text-sm text-gray-200 -top-5 left-2 whitespace-nowrap">
+              Juin 2023
+            </span>
+          </motion.div>
+        </div>
+        <div className="flex md:contents flex-row-reverse">
+          <motion.div
+            initial={{ right: "20rem" }}
+            whileInView={{ right: "0rem" }}
+            transition={transition}
+            className="relative p-4 my-6 text-gray-800 bg-blue-300 rounded-xl col-start-1 col-end-5 mr-auto md:mr-0 md:ml-auto"
+          >
+            <h3 className="text-lg font-semibold lg:text-xl">Projet</h3>
+            <p className="mt-2 leading-6">
+              Conception et r&eacute;alisation d&#39;une application web pour la
+              gestion de vente de voiture.
+            </p>
+            <span className="absolute text-sm text-gray-200 -top-5 left-2 whitespace-nowrap">
+              Mars 2023
+            </span>
+          </motion.div>
+          <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+            <div className="flex items-center justify-center w-6 h-full">
+              <div className="w-1 h-full bg-indigo-300 rounded-t-full bg-gradient-to-b from-indigo-400 to-indigo-300"></div>
+            </div>
+            <div className="absolute w-6 h-6 -mt-3 bg-gray-900 border-4 border-indigo-400 rounded-full top-1/2"></div>
+          </div>
+        </div>
+        <div className="flex md:contents">
+          <div className="relative col-start-5 col-end-6 mr-7 md:mx-auto">
+            <div className="flex items-center justify-center w-6 h-full">
+              <div className="w-1 h-full bg-indigo-300"></div>
+            </div>
+            <div className="absolute w-6 h-6 -mt-3 bg-gray-900 border-4 border-indigo-400 rounded-full top-1/2"></div>
+          </div>
+          <motion.div
+            initial={{ right: "-10rem" }}
+            whileInView={{ right: "0rem" }}
+            transition={transition}
+            className="relative p-4 my-6 text-gray-800 bg-blue-300 rounded-xl col-start-6 col-end-10 mr-auto"
+          >
+            <h3 className="text-lg font-semibold lg:text-xl">Projet </h3>
+            <p className="mt-2 leading-6">
+              Projet de fin d&#39;ann&eacute;e au sein de l&#39;ENI ayant pour
+              th&egrave;me de gestion de vol d&#39;une compagnie
+              a&eacute;rienne.
+            </p>
+            <span className="absolute text-sm text-gray-200 -top-5 left-2 whitespace-nowrap">
+              Octobre 2023
+            </span>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
