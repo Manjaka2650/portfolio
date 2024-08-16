@@ -23,7 +23,7 @@ import {
   FaDatabase,
 } from "react-icons/fa";
 import React, { useState } from "react";
-// import {}  from 're'
+// import {}  from &#39;re&#39;
 import Link from "next/link";
 
 const transition = { type: "spring", duration: 2 };
@@ -58,7 +58,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="relative h-screen bg-[url('/images/bg2.jpg')] bg-cover bg-center">
+    <div className="relative h-screen bg-[url(&#39;/images/bg2.jpg&#39;)] bg-cover bg-center">
       <NavBar />
 
       <div className="max-w-7xl mx-auto relative flex items-center justify-center h-full">
@@ -103,7 +103,7 @@ const NavBar = () => {
     <>
       <div className=" fixed w-full mx-auto max-w-screen-xl px-6 lg:px-8 z-50  tpp-0 left-0 bg-transparent">
         <nav className="flex max-w-7x1 mx-auto flex-wrap items-center justify-between p-3 bg-gray-200/20 ">
-          <img
+          <Image
             src={"/images/self.png"}
             className="h-26 w-16 rounded-full"
             alt=""
@@ -176,7 +176,7 @@ const Profil = () => {
 
         <div className="w-full mx-auto py-10 bg: xl:px-16 xs:px-8  md:items-center md:justify-center flex flex-col md:flex-row gap-1 justify-center items-center pt-2 p-10">
           <div className="w-full md:w-1/2 p-16 ">
-            <img
+            <Image
               className="rounded-full w-full md:w-3/4 h-auto mx-auto"
               src={"/images/self.png"}
               alt=""
@@ -248,7 +248,7 @@ const CV = () => {
       <h2 className="text-2x1 font-bold mb-4 text-gray-400">Voici mon CV</h2>
 
       {/* <div className="w-full h-full md:w-1/2 p-4 "> */}
-      <img className="w-full h-auto rounded" src={"/images/CV.png"} alt="" />
+      <Image className="w-full h-auto rounded" src={"/images/CV.png"} alt="" />
       {/* </div> */}
     </div>
   );
@@ -584,8 +584,8 @@ const Projet = () => {
       titre: <>D&eacute;veloppment web</>,
       description: (
         <>
-          D&eacute;veloppment d&#39;un page web pour la pub d'un salle de sport
-          avec React et CSS
+          D&eacute;veloppment d&#39;un page web pour la pub d&#39;un salle de
+          sport avec React et CSS
         </>
       ),
       techno: [
