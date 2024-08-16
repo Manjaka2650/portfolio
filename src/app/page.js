@@ -107,6 +107,8 @@ const NavBar = () => {
             src={"/images/self.png"}
             className="h-26 w-16 rounded-full"
             alt=""
+            width={2000}
+            height={2000}
           />
           {/* menu */}
           <div className="flex md:hidden">
@@ -180,6 +182,8 @@ const Profil = () => {
               className="rounded-full w-full md:w-3/4 h-auto mx-auto"
               src={"/images/self.png"}
               alt=""
+              width={2000}
+              height={2000}
             />
           </div>
           <div className="w-full flex flex-col items-center md:items-center justify-center gap-4 text-white dark:text-gray-400 md:items-center md:justify-center md:mt-0 sm:mt-8 xs:mt-4">
@@ -248,7 +252,13 @@ const CV = () => {
       <h2 className="text-2x1 font-bold mb-4 text-gray-400">Voici mon CV</h2>
 
       {/* <div className="w-full h-full md:w-1/2 p-4 "> */}
-      <Image className="w-full h-auto rounded" src={"/images/CV.png"} alt="" />
+      <Image
+        className="w-full h-auto rounded"
+        src={"/images/CV.png"}
+        width={2000}
+        height={2000}
+        alt=""
+      />
       {/* </div> */}
     </div>
   );
