@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import lien from "./lien";
 // import pain from "../asset/image/Pains.jpg";
 // import { FaHtml5, FaCss3Alt, FaJs, FaGithub } from "react-icons/fa";
 import {
@@ -58,7 +58,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="relative h-screen bg-[url('/images/bg2.jpg')] bg-cover bg-center">
+    <div className="relative h-screen bg-[url(lien+'images/bg2.jpg')] bg-cover bg-center">
       <NavBar />
 
       <div className="max-w-7xl mx-auto relative flex items-center justify-center h-full">
@@ -104,7 +104,7 @@ const NavBar = () => {
       <div className=" fixed w-full mx-auto max-w-screen-xl px-6 lg:px-8 z-50  tpp-0 left-0 bg-transparent">
         <nav className="flex max-w-7x1 mx-auto flex-wrap items-center justify-between p-3 bg-gray-200/20 ">
           <Image
-            src={"/images/self.png"}
+            src={lien + "images/self.png"}
             className="h-26 w-16 rounded-full"
             alt=""
             width={2000}
@@ -180,7 +180,7 @@ const Profil = () => {
           <div className="w-full md:w-1/2 p-16 ">
             <Image
               className="rounded-full w-full md:w-3/4 h-auto mx-auto"
-              src={"/images/self.png"}
+              src={lien + "images/self.png"}
               alt=""
               width={2000}
               height={2000}
@@ -254,7 +254,7 @@ const CV = () => {
       {/* <div className="w-full h-full md:w-1/2 p-4 "> */}
       <Image
         className="w-full h-auto rounded"
-        src={"/images/CV.png"}
+        src={lien + "images/CV.png"}
         width={2000}
         height={2000}
         alt=""
@@ -292,7 +292,12 @@ const Skills = () => {
     },
     {
       icon: (
-        <Image src={"/images/icons/django.svg"} alt="" width={20} height={20} />
+        <Image
+          src={lien + "images/icons/django.svg"}
+          alt=""
+          width={20}
+          height={20}
+        />
       ),
       name: "Django",
       level: 80,
@@ -300,7 +305,7 @@ const Skills = () => {
     {
       icon: (
         <Image
-          src={"/images/icons/nodejs.svg"}
+          src={lien + "images/icons/nodejs.svg"}
           className="text-orange-600"
           width={20}
           alt=""
@@ -315,7 +320,7 @@ const Skills = () => {
     {
       icon: (
         <Image
-          src={"/images/icons/java.svg"}
+          src={lien + "images/icons/java.svg"}
           className="text-orange-600"
           width={20}
           height={20}
@@ -334,7 +339,7 @@ const Skills = () => {
     {
       icon: (
         <Image
-          src={"/images/icons/python.svg"}
+          src={lien + "images/icons/python.svg"}
           className="text-orange-600"
           width={20}
           alt=""
@@ -348,7 +353,7 @@ const Skills = () => {
     {
       icon: (
         <Image
-          src={"/images/icons/cpp.svg"}
+          src={lien + "images/icons/cpp.svg"}
           className="text-orange-600"
           width={20}
           alt=""
@@ -362,7 +367,7 @@ const Skills = () => {
     {
       icon: (
         <Image
-          src={"/images/icons/csharp.svg"}
+          src={lien + "images/icons/csharp.svg"}
           className="text-orange-600"
           width={20}
           alt=""
@@ -378,7 +383,7 @@ const Skills = () => {
     {
       icon: (
         <Image
-          src={"/images/icons/postgresql.svg"}
+          src={lien + "images/icons/postgresql.svg"}
           className="text-orange-600"
           width={20}
           height={20}
@@ -392,7 +397,7 @@ const Skills = () => {
     {
       icon: (
         <Image
-          src={"/images/icons/mysql.svg"}
+          src={lien + "images/icons/mysql.svg"}
           className="text-orange-600"
           width={20}
           height={20}
@@ -506,7 +511,7 @@ const Skills = () => {
 const Projet = () => {
   const allProject = [
     {
-      image: "/images/projets/csharp.png",
+      image: lien + "images/projets/csharp.png",
       titre: <>D&eacute;veloppment desktop</>,
       description: (
         <>D&eacute;veloppment d&#39;un projet de gestion de stock avec C#</>
@@ -515,7 +520,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/C#",
     },
     {
-      image: "/images/projets/vftm1.png",
+      image: lien + "images/projets/vftm1.png",
       titre: <>D&eacute;veloppment web</>,
       description: (
         <>
@@ -540,7 +545,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/Django",
     },
     {
-      image: "/images/projets/IHM.png",
+      image: lien + "images/projets/IHM.png",
       titre: <>D&eacute;veloppment web</>,
       description: (
         <>
@@ -565,7 +570,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/Django",
     },
     {
-      image: "/images/projets/mobile1.jpg",
+      image: lien + "images/projets/mobile1.jpg",
       titre: <>D&eacute;veloppment mobile</>,
       description: (
         <>
@@ -590,7 +595,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/Django",
     },
     {
-      image: "/images/projets/fitclub1.png",
+      image: lien + "images/projets/fitclub1.png",
       titre: <>D&eacute;veloppment web</>,
       description: (
         <>
@@ -612,7 +617,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/Django",
     },
     {
-      image: "/images/projets/QT.jpg",
+      image: lien + "images/projets/QT.jpg",
       titre: <>D&eacute;veloppment desktop</>,
       description: (
         <>
@@ -625,7 +630,7 @@ const Projet = () => {
     },
 
     {
-      image: "/images/projets/CsharpL2.jpg",
+      image: lien + "images/projets/CsharpL2.jpg",
       titre: <>D&eacute;veloppment desktop</>,
       description: (
         <>
