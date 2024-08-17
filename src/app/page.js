@@ -58,7 +58,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="relative h-screen bg-[url(lien+'images/bg2.jpg')] bg-cover bg-center">
+    <div className="relative h-screen bg-[url('https://manjaka2650.github.io/portfolio_/images/bg2.jpg')] bg-cover bg-center">
       <NavBar />
 
       <div className="max-w-7xl mx-auto relative flex items-center justify-center h-full">
