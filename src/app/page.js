@@ -231,10 +231,7 @@ const Profil = () => {
             <p></p>
 
             <div className="sm:mt-4 xs:mt-2">
-              <a
-                href={lien + "files/CV RAKOTO Dieu Donne Manjaka Hasina.pdf"}
-                download
-              >
+              <a href={"files/CVRAKOTODieuDonneManjakaHasina.pdf"} download>
                 <button className="px-6 py-1 bg-blue-500 text-white rounded hover:bg-blue-700 ">
                   Voir mon CV
                 </button>
