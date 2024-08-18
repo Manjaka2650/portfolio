@@ -200,25 +200,29 @@ const Profil = () => {
               height={2000}
             />
           </motion.div>
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={animationVariants}
-            transition={{ duration: 0.7 }}
-            className="w-full flex flex-col items-center md:items-center justify-center gap-4 text-white dark:text-gray-400 md:items-center md:justify-center md:mt-0 sm:mt-8 xs:mt-4"
-          >
+          <div className="w-full flex flex-col items-center md:items-center justify-center gap-4 text-white dark:text-gray-400 md:items-center md:justify-center md:mt-0 sm:mt-8 xs:mt-4">
             {/* <h1 className="text-4xl font-semibold font-serif">
               Laissez moi me presenter
             </h1> */}
-            <p>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              variants={animationVariants}
+              transition={{ duration: 0.7 }}
+            >
               Mon nom complet est RAKOTO Dieu Donn&eacute; Manjaka Hasina,
               J&#39;ai 20 ans et actuellement en troisi&egrave;me ann&eacute;e
               de licence &agrave; l&#39;&Eacute;cole Nationale
               d&#39;Informatique &agrave; Fianarantsoa dans la branche
               G&eacute;nie Logiciel et de base de donn&eacute;. J&#39;habite
               actuellement &agrave; Manaotsara Fianarantsoa Lot 251 bis / 3304.
-            </p>
-            <p>
+            </motion.p>
+            <motion.p
+              initial="hidden"
+              whileInView="visible"
+              variants={animationVariants}
+              transition={{ duration: 0.7 }}
+            >
               Je me specialise principallement aux langages de programmation
               JavaScript et Python ainsi que leur framework pour le
               d&eacute;veloppement des application ou sites web. J&#39;utilise
@@ -227,7 +231,7 @@ const Profil = () => {
               est dans le domaine de l&#39;intelligence artificielle. En ce qui
               concerne les base de donn&eacute; j&#39;utilise Postgresql et
               Mysql.
-            </p>
+            </motion.p>
             <p></p>
 
             <div className="sm:mt-4 xs:mt-2">
@@ -237,7 +241,7 @@ const Profil = () => {
                 </button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
