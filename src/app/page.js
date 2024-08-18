@@ -167,6 +167,14 @@ const NavBar = () => {
 };
 
 const Profil = () => {
+  const animationVariants = {
+    hidden: { opacity: 0, x: 200 }, // Start off-screen to the right
+    visible: { opacity: 2, x: 0 }, // Animate to the actual position
+  };
+  const animationVariant = {
+    hidden: { opacity: 0, x: -200 }, // Start off-screen to the right
+    visible: { opacity: 2, x: 0 }, // Animate to the actual position
+  };
   return (
     <div className="w-full h-full bg-gray-900 dark:bg-gray-900">
       <div className="flex min-h-screen  flex-col items-center justify-center overflow-hidden gap-4">
@@ -177,7 +185,13 @@ const Profil = () => {
         </div>
 
         <div className="w-full mx-auto py-10 bg: xl:px-16 xs:px-8  md:items-center md:justify-center flex flex-col md:flex-row gap-1 justify-center items-center pt-2 p-10">
-          <div className="w-full md:w-1/2 p-16 ">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={animationVariant}
+            transition={{ duration: 0.7 }}
+            className="w-full md:w-1/2 p-16 "
+          >
             <Image
               className="rounded-full w-full md:w-3/4 h-auto mx-auto"
               src={lien + "images/self.png"}
@@ -185,8 +199,14 @@ const Profil = () => {
               width={2000}
               height={2000}
             />
-          </div>
-          <div className="w-full flex flex-col items-center md:items-center justify-center gap-4 text-white dark:text-gray-400 md:items-center md:justify-center md:mt-0 sm:mt-8 xs:mt-4">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            variants={animationVariants}
+            transition={{ duration: 0.7 }}
+            className="w-full flex flex-col items-center md:items-center justify-center gap-4 text-white dark:text-gray-400 md:items-center md:justify-center md:mt-0 sm:mt-8 xs:mt-4"
+          >
             {/* <h1 className="text-4xl font-semibold font-serif">
               Laissez moi me presenter
             </h1> */}
@@ -211,13 +231,16 @@ const Profil = () => {
             <p></p>
 
             <div className="sm:mt-4 xs:mt-2">
-              <a href="#CV" download={"CV de Manjaka Hasina.png"}>
+              <a
+                href={lien + "files/CV RAKOTO Dieu Donne Manjaka Hasina.pdf"}
+                download
+              >
                 <button className="px-6 py-1 bg-blue-500 text-white rounded hover:bg-blue-700 ">
                   Voir mon CV
                 </button>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
@@ -237,7 +260,7 @@ const Competences = () => {
 
         <Skills />
         {/* cv */}
-        <CV />
+        {/* <CV /> */}
       </div>
     </div>
   );
@@ -263,247 +286,164 @@ const CV = () => {
     </div>
   );
 };
+
 const Skills = () => {
   const webDev = [
     {
-      icon: <FaHtml5 className="text-orange-600" size={20} />,
-      name: "HTML ",
-      level: 80,
+      icon: <FaHtml5 className="text-orange-600" size={60} />,
+      name: "HTML",
     },
     {
-      icon: <FaCss3 className="text-blue-400" size={20} />,
-      name: "CSS",
-      level: 60,
+      icon: <FaCss3 className="text-blue-400" size={60} />,
+      name: "CSS3",
+    },
+
+    {
+      icon: <FaNodeJs className="text-green-600" size={60} />,
+      name: "NodeJs",
     },
     {
-      icon: <FaReact className="text-blue-400" size={20} />,
+      icon: <FaReact className="text-blue-400" size={60} />,
       name: "React Js",
-      level: 75,
-    },
-    {
-      icon: <FaJs className="text-black" size={20} />,
-      name: "Next js",
-      level: 70,
-    },
-    {
-      icon: <FaReact className="text-blue-400" size={20} />,
-      name: "React Native",
-      level: 65,
     },
     {
       icon: (
         <Image
-          src={lien + "images/icons/django.svg"}
-          alt=""
-          width={20}
-          height={20}
+          src={"images/icons/nextjs.svg"}
+          alt="Django"
+          width={60}
+          height={60}
+        />
+      ),
+      name: "Next js",
+    },
+
+    {
+      icon: (
+        <Image
+          src={"images/icons/django.svg"}
+          alt="Django"
+          width={60}
+          height={60}
         />
       ),
       name: "Django",
-      level: 80,
-    },
-    {
-      icon: (
-        <Image
-          src={lien + "images/icons/nodejs.svg"}
-          className="text-orange-600"
-          width={20}
-          alt=""
-          height={20}
-        />
-      ),
-      name: "NodeJs ",
-      level: 80,
     },
   ];
+
   const dev = [
     {
       icon: (
         <Image
-          src={lien + "images/icons/java.svg"}
-          className="text-orange-600"
-          width={20}
-          height={20}
-          alt=""
+          src={"images/icons/java.svg"}
+          alt="Java"
+          width={60}
+          height={60}
         />
       ),
-
       name: "JAVA",
-      level: 70,
     },
     {
-      icon: <FaJs className="text-yellow-400" size={20} />,
+      icon: <FaJs className="text-yellow-400" size={60} />,
       name: "JavaScript",
-      level: 80,
     },
     {
       icon: (
         <Image
-          src={lien + "images/icons/python.svg"}
-          className="text-orange-600"
-          width={20}
-          alt=""
-          height={20}
+          src={"images/icons/python.svg"}
+          alt="Python"
+          width={60}
+          height={60}
         />
       ),
-
       name: "Python",
-      level: 70,
     },
     {
       icon: (
-        <Image
-          src={lien + "images/icons/cpp.svg"}
-          className="text-orange-600"
-          width={20}
-          alt=""
-          height={20}
-        />
+        <Image src={"images/icons/cpp.svg"} alt="C++" width={60} height={60} />
       ),
-
       name: "C++",
-      level: 60,
     },
     {
       icon: (
         <Image
-          src={lien + "images/icons/csharp.svg"}
-          className="text-orange-600"
-          width={20}
-          alt=""
-          height={20}
+          src={"images/icons/csharp.svg"}
+          alt="C#"
+          width={60}
+          height={60}
         />
       ),
-
       name: "C#",
-      level: 70,
     },
   ];
+
   const bd = [
     {
       icon: (
         <Image
-          src={lien + "images/icons/postgresql.svg"}
-          className="text-orange-600"
-          width={20}
-          height={20}
-          alt=""
+          src={"images/icons/postgresql.svg"}
+          alt="Postgresql"
+          width={60}
+          height={60}
         />
       ),
-
       name: "Postgresql",
-      level: 70,
     },
     {
       icon: (
         <Image
-          src={lien + "images/icons/mysql.svg"}
-          className="text-orange-600"
-          width={20}
-          height={20}
-          alt=""
+          src={"images/icons/mysql.svg"}
+          alt="Mysql"
+          width={60}
+          height={60}
         />
       ),
-
       name: "Mysql",
-      level: 70,
     },
-    // { name: "MongoDb", level: 50 },
   ];
+  const mobile = [
+    {
+      icon: <FaReact className="text-blue-400" size={60} />,
+      name: "React Native",
+    },
+  ];
+  const animationVariants = {
+    hidden: { opacity: 0, y: 200 }, // Start off-screen to the right
+    visible: { opacity: 1, y: 0 }, // Animate to the actual position
+  };
+
+  const SkillIcon = ({ icon, name }) => (
+    <motion.div
+      className="flex flex-col items-center justify-center"
+      initial="hidden"
+      whileInView="visible"
+      variants={animationVariants}
+      transition={{ duration: 1, type: "spring", stiffness: 100 }}
+    >
+      {icon}
+      <p className="text-sm font-medium text-gray-400 mt-2">{name}</p>
+    </motion.div>
+  );
+
+  const SkillView = ({ data, title }) => {
+    return (
+      <div className="pt-7 items-center justify-center">
+        <h2 className="text-xl font-bold mb-6 text-gray-400 ">{title}</h2>
+        <div className="flex justify-around gap-6 flex-wrap">
+          {data.map((d, index) => (
+            <SkillIcon key={index} icon={d.icon} name={d.name} />
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="w-full max-w-lg p-4">
-      <div className="pt-7">
-        <h2 className="text-x1 font-bold mb-3 text-gray-400">
-          Langage de programmation
-        </h2>
-
-        {dev.map((sl, index) => (
-          <div key={index} className="mb-4">
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium text-gray-400">
-                <p className="flex-row flex gap-3">
-                  {sl.icon}
-                  {sl.name}
-                </p>
-              </span>
-              <span className="text-sm font-medium text-gray-400">
-                {sl.level}%
-              </span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2.5">
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: `${sl.level}%` }}
-                transition={transition}
-                className="bg-blue-600 h-2.5 rounded-full"
-                // style={{ width: `${sl.level}%` }}
-              ></motion.div>
-            </div>
-          </div>
-        ))}
-      </div>
-      <h2 className="text-2x1 font-bold mb-4 text-gray-400">
-        {" "}
-        Compet&eacute;nces web
-      </h2>
-      {/* <h3>D&eacute;veloppement web</h3> */}
-      <div>
-        {webDev.map((sl, index) => (
-          <div key={index} className="mb-4">
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium text-gray-400">
-                <p className="flex-row flex gap-3">
-                  {sl.icon}
-                  {sl.name}
-                </p>
-              </span>
-              <span className="text-sm font-medium text-gray-400">
-                {sl.level}%
-              </span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2.5">
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: `${sl.level}%` }}
-                transition={transition}
-                className="bg-blue-600 h-2.5 rounded-full"
-                // style={{ width: `${sl.level}%` }}
-              ></motion.div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="pt-7">
-        <h2 className="text-x1 font-bold mb-3 text-gray-400">
-          Base de donn&eacute;s
-        </h2>
-
-        {bd.map((sl, index) => (
-          <div key={index} className="mb-4">
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium text-gray-400">
-                <p className="flex-row flex gap-3">
-                  {sl.icon}
-                  {sl.name}
-                </p>
-              </span>
-              <span className="text-sm font-medium text-gray-400">
-                {sl.level}%
-              </span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2.5">
-              <motion.div
-                initial={{ width: 0 }}
-                whileInView={{ width: `${sl.level}%` }}
-                transition={transition}
-                className="bg-blue-600 h-2.5 rounded-full"
-                // style={{ width: `${sl.level}%` }}
-              ></motion.div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <div className="w-full p-4 justify-center items-center">
+      <SkillView data={dev} title={"Langages de programmation"} />
+      <SkillView data={webDev} title={"Compétences web"} />
+      <SkillView data={bd} title={" Bases de données"} />
+      <SkillView data={mobile} title={"Développement mobile"} />
     </div>
   );
 };
@@ -516,7 +456,20 @@ const Projet = () => {
       description: (
         <>D&eacute;veloppment d&#39;un projet de gestion de stock avec C#</>
       ),
-      techno: [{ nom: "C#", icon: <FaCode className="text-blue-400" /> }],
+      techno: [
+        {
+          nom: "C#",
+          icon: (
+            <Image
+              src={lien + "images/icons/csharp.svg"}
+              className="text-orange-600"
+              width={20}
+              alt=""
+              height={20}
+            />
+          ),
+        },
+      ],
       gitlink: "https://www.github.repo/C#",
     },
     {
@@ -535,7 +488,14 @@ const Projet = () => {
         },
         {
           nom: "Django",
-          icon: <FaPython className="text-yellow-400" size={20} />,
+          icon: (
+            <Image
+              src={lien + "images/icons/django.svg"}
+              alt=""
+              width={20}
+              height={20}
+            />
+          ),
         },
         {
           nom: "Bootsrap",
@@ -585,7 +545,14 @@ const Projet = () => {
         },
         {
           nom: "Django",
-          icon: <FaPython className="text-yellow-400" size={20} />,
+          icon: (
+            <Image
+              src={lien + "images/icons/django.svg"}
+              alt=""
+              width={20}
+              height={20}
+            />
+          ),
         },
         {
           nom: "Css3",
@@ -625,7 +592,20 @@ const Projet = () => {
           compagnie a&eacute;rienne avec C++ et QT
         </>
       ),
-      techno: [{ nom: "C++", icon: <FaCode className="text-blue-400" /> }],
+      techno: [
+        {
+          nom: "C++",
+          icon: (
+            <Image
+              src={lien + "images/icons/cpp.svg"}
+              className="text-orange-600"
+              width={20}
+              alt=""
+              height={20}
+            />
+          ),
+        },
+      ],
       gitlink: "https://www.github.repo/C#",
     },
 
@@ -638,7 +618,20 @@ const Projet = () => {
           C# et Visual Studio
         </>
       ),
-      techno: [{ nom: "C++", icon: <FaCode className="text-blue-400" /> }],
+      techno: [
+        {
+          nom: "C#",
+          icon: (
+            <Image
+              src={lien + "images/icons/csharp.svg"}
+              className="text-orange-600"
+              width={20}
+              alt=""
+              height={20}
+            />
+          ),
+        },
+      ],
       gitlink: "https://www.github.repo/C#",
     },
   ];
@@ -692,6 +685,14 @@ const Projet = () => {
 };
 
 const ContactMe = () => {
+  const animationVariants = {
+    hidden: { opacity: 0, x: 200 }, // Start off-screen to the right
+    visible: { opacity: 2, x: 0 }, // Animate to the actual position
+  };
+  const animationVariant = {
+    hidden: { opacity: 0, x: -200 }, // Start off-screen to the right
+    visible: { opacity: 2, x: 0 }, // Animate to the actual position
+  };
   return (
     <section className="bg-slate-800 dark:bg-slate-800" id="contact">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -705,7 +706,7 @@ const ContactMe = () => {
             </p> */}
           </div>
         </div>
-        <div className="flex items-stretch justify-center">
+        <div className="flex items-stretch justify-center overflow-hidden">
           <div className="grid md:grid-cols-2">
             <div className="h-full pr-6">
               <p className="mt-3 mb-12 text-lg text-gray-400 dark:text-slate-300">
@@ -777,7 +778,14 @@ const ContactMe = () => {
                 </li>
               </ul>
             </div>
-            <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              variants={animationVariants}
+              transition={{ duration: 0.7 }}
+              className="card h-fit max-w-6xl p-5 md:p-12"
+              id="form"
+            >
               <h2 className="mb-4 text-2xl text-gray-200 font-bold dark:text-gray-200">
                 Ecriver ici ...
               </h2>
@@ -837,7 +845,7 @@ const ContactMe = () => {
                   </button>
                 </div>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
