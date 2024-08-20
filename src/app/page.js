@@ -58,7 +58,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="relative h-screen bg-[url('https://manjaka2650.github.io/portfolio_/images/bg2.jpg')] bg-cover bg-center">
+    <div className="relative h-screen bg-[url('https://manjaka2650.github.io/portfolio/images/bg2.jpg')] bg-cover bg-center">
       <NavBar />
 
       <div className="max-w-7xl mx-auto relative flex items-center justify-center h-full">
@@ -104,7 +104,7 @@ const NavBar = () => {
       <div className=" fixed w-full mx-auto max-w-screen-xl px-6 lg:px-8 z-50  tpp-0 left-0 bg-transparent">
         <nav className="flex max-w-7x1 mx-auto flex-wrap items-center justify-between p-3 bg-gray-200/20 ">
           <Image
-            src={lien + "images/self.png"}
+            src={"/images/self.png"}
             className="h-26 w-16 rounded-full"
             alt=""
             width={2000}
@@ -194,7 +194,7 @@ const Profil = () => {
           >
             <Image
               className="rounded-full w-full md:w-3/4 h-auto mx-auto"
-              src={lien + "images/self.png"}
+              src={"/images/self.png"}
               alt=""
               width={2000}
               height={2000}
@@ -278,7 +278,7 @@ const CV = () => {
       {/* <div className="w-full h-full md:w-1/2 p-4 "> */}
       <Image
         className="w-full h-auto rounded"
-        src={lien + "images/CV.png"}
+        src={"/images/CV.png"}
         width={2000}
         height={2000}
         alt=""
@@ -311,7 +311,7 @@ const Skills = () => {
       icon: (
         <Image
           src={"images/icons/nextjs.svg"}
-          alt="Django"
+          alt="next"
           width={60}
           height={60}
         />
@@ -452,7 +452,7 @@ const Skills = () => {
 const Projet = () => {
   const allProject = [
     {
-      image: lien + "images/projets/csharp.png",
+      image: "/images/projets/csharp.png",
       titre: <>D&eacute;veloppment desktop</>,
       description: (
         <>D&eacute;veloppment d&#39;un projet de gestion de stock avec C#</>
@@ -462,7 +462,7 @@ const Projet = () => {
           nom: "C#",
           icon: (
             <Image
-              src={lien + "images/icons/csharp.svg"}
+              src={"/images/icons/csharp.svg"}
               className="text-orange-600"
               width={20}
               alt=""
@@ -474,7 +474,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/C#",
     },
     {
-      image: lien + "images/projets/vftm1.png",
+      image: "/images/projets/vftm1.png",
       titre: <>D&eacute;veloppment web</>,
       description: (
         <>
@@ -491,7 +491,7 @@ const Projet = () => {
           nom: "Django",
           icon: (
             <Image
-              src={lien + "images/icons/django.svg"}
+              src={"/images/icons/django.svg"}
               alt=""
               width={20}
               height={20}
@@ -506,7 +506,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/Django",
     },
     {
-      image: lien + "images/projets/IHM.png",
+      image: "/images/projets/IHM.png",
       titre: <>D&eacute;veloppment web</>,
       description: (
         <>
@@ -531,7 +531,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/Django",
     },
     {
-      image: lien + "images/projets/mobile1.jpg",
+      image: "/images/projets/mobile1.jpg",
       titre: <>D&eacute;veloppment mobile</>,
       description: (
         <>
@@ -548,7 +548,7 @@ const Projet = () => {
           nom: "Django",
           icon: (
             <Image
-              src={lien + "images/icons/django.svg"}
+              src={"/images/icons/django.svg"}
               alt=""
               width={20}
               height={20}
@@ -563,7 +563,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/Django",
     },
     {
-      image: lien + "images/projets/fitclub1.png",
+      image: "/images/projets/fitclub1.png",
       titre: <>D&eacute;veloppment web</>,
       description: (
         <>
@@ -585,7 +585,7 @@ const Projet = () => {
       gitlink: "https://www.github.repo/Django",
     },
     {
-      image: lien + "images/projets/QT.jpg",
+      image: "/images/projets/QT.jpg",
       titre: <>D&eacute;veloppment desktop</>,
       description: (
         <>
@@ -598,7 +598,7 @@ const Projet = () => {
           nom: "C++",
           icon: (
             <Image
-              src={lien + "images/icons/cpp.svg"}
+              src={"/images/icons/cpp.svg"}
               className="text-orange-600"
               width={20}
               alt=""
@@ -611,7 +611,7 @@ const Projet = () => {
     },
 
     {
-      image: lien + "images/projets/CsharpL2.jpg",
+      image: "/images/projets/CsharpL2.jpg",
       titre: <>D&eacute;veloppment desktop</>,
       description: (
         <>
@@ -624,7 +624,7 @@ const Projet = () => {
           nom: "C#",
           icon: (
             <Image
-              src={lien + "images/icons/csharp.svg"}
+              src={"/images/icons/csharp.svg"}
               className="text-orange-600"
               width={20}
               alt=""

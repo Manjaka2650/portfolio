@@ -5,7 +5,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "manjaka2650.github.io",
-        pathname: "/portfolio_/images/**",
+        pathname: "/portfolio/images/**",
       },
     ],
   },
