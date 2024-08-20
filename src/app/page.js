@@ -560,7 +560,8 @@ const Projet = () => {
           icon: <FaCss3Alt className="text-blue-400" size={20} />,
         },
       ],
-      gitlink: "https://www.github.repo/Django",
+      gitlink: "https://github.com/Manjaka2650/social-media-front",
+      gitlink2: "https://github.com/Manjaka2650/social-media-back",
     },
     {
       image: "/images/projets/fitclub1.png",
@@ -635,7 +636,33 @@ const Projet = () => {
       ],
       gitlink: "https://www.github.repo/C#",
     },
+    {
+      image: "/images/projets/shooter.png",
+      titre: <>D&eacute;veloppment d'un jeux</>,
+      description: (
+        <>
+          R&eacute;alisation d&#39;un jeux video en deux dimension avec python
+          pygame .
+        </>
+      ),
+      techno: [
+        {
+          nom: "Python",
+          icon: (
+            <Image
+              src={"/images/icons/python.svg"}
+              className="text-orange-600"
+              width={20}
+              alt=""
+              height={20}
+            />
+          ),
+        },
+      ],
+      gitlink: "https://github.com/Manjaka2650/shooter",
+    },
   ];
+  //
   return (
     <div className="items-center md:p-4  justify-center flex flex-wrap gap-10">
       {/* <hr className="w-full h-1 bg-gray-900" /> */}
@@ -673,10 +700,35 @@ const Projet = () => {
                 ))}
               </div>
             </div>
-            <div className="flex flex-wrap rounded bg-blue-300 hover:cursor-pointer hover:text-white hover:bg-blue-400 p-2 items-center justify-center m-5">
-              <FaGithub className="text-white hover" size={40} />{" "}
-              <p>Voir sur GitHub</p>
-            </div>
+            {p.gitlink2 ? (
+              <div className="flex flex-wrap">
+                <a
+                  href={p.gitlink}
+                  target="_blank"
+                  className="flex flex-wrap rounded bg-blue-300 hover:cursor-pointer hover:text-white hover:bg-blue-400 p-2 items-center justify-center m-5"
+                >
+                  <FaGithub className="text-white hover" size={40} />{" "}
+                  <p>Voir frontend sur github</p>
+                </a>
+                <a
+                  href={p.gitlink2}
+                  target="_blank"
+                  className="flex flex-wrap rounded bg-blue-300 hover:cursor-pointer hover:text-white hover:bg-blue-400 p-2 items-center justify-center m-5"
+                >
+                  <FaGithub className="text-white hover" size={40} />{" "}
+                  <p>Voir backend sur GitHub</p>
+                </a>
+              </div>
+            ) : (
+              <a
+                href={p.gitlink}
+                target="_blank"
+                className="flex flex-wrap rounded bg-blue-300 hover:cursor-pointer hover:text-white hover:bg-blue-400 p-2 items-center justify-center m-5"
+              >
+                <FaGithub className="text-white hover" size={40} />
+                <p>Voir sur github</p>
+              </a>
+            )}
           </div>
         ))}
         {/* fin */}
