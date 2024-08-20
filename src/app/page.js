@@ -638,7 +638,7 @@ const Projet = () => {
     },
     {
       image: "/images/projets/shooter.png",
-      titre: <>D&eacute;veloppment d'un jeux</>,
+      titre: <>D&eacute;veloppment d&#39;un jeux</>,
       description: (
         <>
           R&eacute;alisation d&#39;un jeux video en deux dimension avec python
